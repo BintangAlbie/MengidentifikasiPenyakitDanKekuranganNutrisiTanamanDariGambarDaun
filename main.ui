@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShowImage</class>
+ <widget class="QMainWindow" name="ShowImage">
+  <property name="windowTitle">
+   <string>Identifikasi Penyakit dan Kekurangan Nutrisi Tanaman</string>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>50</x>
+    <y>50</y>
+    <width>1350</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1150</width>
+    <height>680</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+     <property name="spacing">
+       <number>6</number>
+     </property>
+     <property name="leftMargin">
+       <number>10</number>
+     </property>
+     <property name="topMargin">
+       <number>8</number>
+     </property>
+     <property name="rightMargin">
+       <number>10</number>
+     </property>
+     <property name="bottomMargin">
+       <number>8</number>
+     </property>
+    <item>
+     <widget class="QLabel" name="title">
+      <property name="text">
+       <string>IDENTIFIKASI PENYAKIT DAN KEKURANGAN NUTRISI TANAMAN
+BERDASARKAN BENTUK DAN TEPI DAUN</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string>font-size: 15px; font-weight: bold; color: #2c5f2d; padding: 6px;</string>
+      </property>
+     </widget>
+    </item>
+     <item>
+      <layout class="QHBoxLayout" name="btnLayout">
+       <item>
+        <widget class="QPushButton" name="loadBtn">
+         <property name="text">
+          <string> Load Image</string>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string>QPushButton { font-size: 10pt; font-weight: bold; padding: 6px 12px; background-color: #4a7c59; color: white; border-radius: 4px; } QPushButton:hover { background-color: #2c5f2d; }</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="identBtn">
+         <property name="text">
+          <string> Identifikasi</string>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>34</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string>QPushButton { font-size: 10pt; font-weight: bold; padding: 6px 12px; background-color: #4a7c59; color: white; border-radius: 4px; } QPushButton:hover { background-color: #2c5f2d; }</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="btnSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+
+    <item>
+     <layout class="QHBoxLayout" name="topLayout">
+      <item>
+       <widget class="QGroupBox" name="origGroup">
+        <property name="title">
+         <string>Original Image / Grayscale</string>
+        </property>
+        <layout class="QVBoxLayout" name="origLayout">
+         <item>
+          <widget class="QLabel" name="origLabel">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: #f0f0f0; font-size: 10pt; color: #888;</string>
+           </property>
+           <property name="text">
+<string>Load image untuk memulai</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="cannyGroup">
+        <property name="title">
+         <string>Canny Edge Detection</string>
+        </property>
+        <layout class="QVBoxLayout" name="cannyLayout">
+         <item>
+          <widget class="QLabel" name="cannyLabel">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: #f0f0f0; font-size: 10pt; color: #888;</string>
+           </property>
+           <property name="text">
+            <string>Load image untuk memulai</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="sobelGroup">
+        <property name="title">
+         <string>Sobel Edge Detection</string>
+        </property>
+        <layout class="QVBoxLayout" name="sobelLayout">
+         <item>
+          <widget class="QLabel" name="sobelLabel">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: #f0f0f0; font-size: 10pt; color: #888;</string>
+           </property>
+           <property name="text">
+            <string>Load image untuk memulai</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bottomLayout">
+      <item>
+       <widget class="QGroupBox" name="prewittGroup">
+        <property name="title">
+         <string>Prewitt Edge Detection</string>
+        </property>
+        <layout class="QVBoxLayout" name="prewittLayout">
+         <item>
+          <widget class="QLabel" name="prewittLabel">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: #f0f0f0; font-size: 10pt; color: #888;</string>
+           </property>
+           <property name="text">
+            <string>Load image untuk memulai</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="identGroup">
+        <property name="title">
+         <string>Hasil Identifikasi</string>
+        </property>
+        <layout class="QVBoxLayout" name="identLayout">
+         <item>
+          <widget class="QTextEdit" name="identText">
+           <property name="minimumSize">
+            <size>
+             <width>500</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>font-family: Consolas; font-size: 10pt; background-color: #1e1e1e; color: #d4d4d4; padding: 8px;</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'Consolas'; font-size:10pt; font-weight:400; font-style:normal;"&gt;
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Load image terlebih dahulu, lalu klik Identifikasi&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="statusLayout">
+      <item>
+       <widget class="QLabel" name="statusLabel">
+        <property name="text">
+         <string>Siap - Load image untuk memulai</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-size: 9pt; color: #555; padding: 2px;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
